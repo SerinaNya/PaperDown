@@ -1,7 +1,7 @@
 # PaperDown
 ![Python3](https://img.shields.io/badge/Python-3-blue?color=3776AB&&logo=python)
 
-Download & Upate Paper-1.14
+Download & Update Paper-1.14
 
 需要Python3以及html5lib, BeautifulSoup支持
 
