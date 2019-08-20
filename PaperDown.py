@@ -25,17 +25,17 @@ soup = BeautifulSoup(content, "html5lib")  # pip3 install html5lib
 all_a_tag = soup.find_all("a")  # 辣鸡办法拿所有<a>
 
 dot_jar_location_in_str = str(all_a_tag).find(".jar")  # 海底捞针（定位）
-paper_ver_location = dot_jar_location_in_str - 3  # 小学数学减掉版本号的三位长度
+paper_ver_location = dot_jar_location_in_str - 3  # 幼儿算术减掉版本号的三位长度
 paper_ver = str(all_a_tag)[paper_ver_location:dot_jar_location_in_str]  # 提取三位版本号
-print("\a目前PaperClip的最新构件号为 >>> " + paper_ver)  # 没什么用甚至听不到的声音
+print("\a目前PaperClip的最新Build为 >>> Build" + paper_ver)  # 没什么用甚至听不到的声音
 
 # Aria2c下载文件
 url_of_jar = "https://papermc.io/ci/job/Paper-1.14/lastSuccessfulBuild/artifact/paperclip-" + paper_ver +".jar"  # 地址拼接
 
 aria2c_path = r"" + args["aria2"]  # 再次拼接
-aria2c_cmd = aria2c_path + " -x16 -d " + args["save"] + " " + url_of_jar  # aria2致命参数
+aria2c_cmd = aria2c_path + " -x16 -s16 -d " + args["save"] + " " + url_of_jar  # aria2致命参数
 os.system(aria2c_cmd)
 print()
 
 # 编译&启动      等下个版本吧（逃
-exit("\a感谢使用 PaperDown")
+exit("\a[PaperDown] 感谢使用 PaperDown :D")
